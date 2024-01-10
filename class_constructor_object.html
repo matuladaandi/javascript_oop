@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Constructor and object</title>
+</head>
+
+<body>
+    <script>
+
+        // function constructor
+        function Person() {
+
+        }
+
+        // object
+        const andy = new Person();
+        const bud = new Person();
+
+        // function constructor and properties
+        function Books() {
+            this.nameBook = "";
+            this.noBook = "";
+        }
+
+        const harryPotter = new Books();
+        const lordOfTheRings = new Books();
+
+        // update value object harryPotter
+        harryPotter.nameBook = "Harry Potter Vol.7";
+        harryPotter.noBook = 9;
+
+        console.info(harryPotter);
+        console.info(lordOfTheRings);
+
+    </script>
+</body>
+
+</html>

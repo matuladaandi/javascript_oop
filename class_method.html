@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method diClass </title>
+</head>
+
+<body>
+    <script>
+
+        class Person {
+            constructor(paramName) {
+                this.name = paramName; 
+            }
+
+            sayHello(namaHi) {
+                console.info(`Hii ${namaHi} my name is ${this.name}`);
+            }
+        }
+ 
+        const andy = new Person("Andy");
+        console.info(andy);     
+        andy.sayHello("wid");
+
+        const bud = new Person("bud");
+        console.info(bud);
+        andy.sayHello("owd");
+
+
+    </script>
+</body>
+
+</html>

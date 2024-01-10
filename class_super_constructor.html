@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class super constructor </title>
+</head>
+
+<body>
+    <script>
+
+        class Employee {
+            constructor(paramFirstName) {
+                this.firstName = paramFirstName;
+            }
+            sayHello(name) {
+                console.info(`Hii ${name} my name is Employee ${this.firstName}`);
+            }
+        }
+
+        class Manager extends Employee {
+            constructor(firstNameDua, lastName) {
+                super(firstNameDua);  //  firstNameDua  will be sent to constructor(paramFirstName)
+                this.lastN = lastName;
+            }
+
+        }
+
+        const andy = new Employee("andy");
+        andy.sayHello("jpk");
+
+
+        const bud = new Manager();
+        // 1.28.05
+
+    </script>
+</body>
+
+</html>

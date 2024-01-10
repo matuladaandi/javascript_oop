@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+
+<body>
+
+    <script>
+
+        class MathUtil {
+            static sum(...numbers) {
+                if (numbers.length == 0) {
+                    throw new Error("Total parameter should more 0");
+                }
+
+                let total = 0;
+                for (const number of numbers) {
+                    total += number;
+                }
+                return total;
+            }
+        }
+        try {
+            // if an error occurs
+            const result = MathUtil.sum();
+            console.info(result);
+        } catch (error) {
+            // errors caught
+            console.info(`happen error : ${error.message}`);
+        } finally {
+            console.info("program finish");
+        }
+        console.info("Done");
+
+        class Counter {
+            #counter = 0;
+            next() {
+                try {
+                    return this.#counter;
+                } finally {
+                    this.#counter++;
+                }
+
+            }
+        }
+        const counter = new Counter();
+        console.info(counter.next()); // 0
+        console.info(counter.next()); // 1
+        console.info(counter.next()); // 2
+        console.info(counter.next()); // 3
+
+
+    </script>
+
+</body>
+
+</html>
